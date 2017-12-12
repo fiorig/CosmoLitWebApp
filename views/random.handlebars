@@ -1,0 +1,41 @@
+<br>
+<br>
+<div style = "margin-left:10%; margin-right:50%;">
+  <ul id = "productList" class="list-group">
+    <li class="list-group-item">
+      {{#if item.name}}
+        {{item.name}}
+        <br>
+        Rating: {{item.rating}}
+        <br>
+        {{/if}}
+      </span>
+         {{#if item.type}}
+          Type: {{item.type}}
+          <br>
+         {{/if}}
+
+         {{#if item.cost}}
+          Cost: ${{item.cost}}
+          <br>
+         {{/if}}
+
+         {{#if item.description}}
+          Description: {{item.description}}
+                 <br>
+         {{/if}}
+
+         {{#if item.duration}}
+          Duration: {{item.duration}} Months
+          <br>
+         {{/if}}
+
+         {{#if item.skin_type}}
+         Skin Type:
+          {{#each item.skin_type}}
+           {{item}}
+          {{/each}}
+          {{/if}}
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,78 @@
+<div style = "background-color:pink; color:white;" class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">Discover and Rate</h1>
+    <p class="lead">Information from cost, to ratings based on skin type of user and duration of use.</p>
+  </div>
+</div>
+<form class="form-inline my-2 my-lg-0" style = "margin-right: 25%; float:right;">
+  <input  class="form-control mr-sm-2" type="text" id="myInput" onkeyup="search()" placeholder="Search for products!">
+</form>
+<div style = "margin-left:10%; margin-right:50%;">
+  <ul id = "productList" class="list-group">
+    <div id = "message"> </div>
+    {{#each products}}
+    <li class="list-group-item">
+      {{#if this.name}}
+        {{this.name}}
+        <br>
+        Rating: {{this.rating}}
+        <br>
+        {{/if}}
+      </span>
+         {{#if this.type}}
+          Type: {{this.type}}
+          <br>
+         {{/if}}
+
+         {{#if this.cost}}
+          Cost: ${{this.cost}}
+          <br>
+         {{/if}}
+
+         {{#if this.description}}
+          Description: {{this.description}}
+                 <br>
+         {{/if}}
+
+         {{#if this.duration}}
+          Duration: {{this.duration}} Months
+          <br>
+         {{/if}}
+
+         {{#if this.skin_type}}
+         Skin Type:
+          {{#each this.skin_type}}
+           {{this}}
+          {{/each}}
+          {{/if}}
+    </li>
+    {{/each}}
+  </ul>
+
+</div>
+<script>
+
+function search() {
+  var input, filter, ul, li, a, i;
+     input = document.getElementById('myInput');
+     filter = input.value.toUpperCase();
+     ul = document.getElementById("productList");
+     li = ul.getElementsByTagName('li');
+  var counter = 0;
+  for (i = 0; i < li.length; i++) {
+        a = li[i];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            counter++;
+            li[i].style.display = "none";
+        }
+    }
+
+    if(counter == li.length) {
+      document.getElementById('message').innerHTML = "No Matches!";
+    } else {
+      document.getElementById('message').innerHTML = "";
+    }
+  }
+</script>

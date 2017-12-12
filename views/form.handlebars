@@ -1,0 +1,79 @@
+
+<div style = "background-color: pink; color:white;"class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">
+      Submit Rating of Product!
+    </h1>
+    <p class="lead">Only required field is name and rating</p>
+  </div>
+</div>
+<article>
+<form method = 'POST' action = '/' id = "product_submit">
+<div style = "margin-left: 5%; margin-right: 25%;">
+<div class="form-group row">
+  <label class="col-2 col-form-label">
+    Name of Product
+  </label>
+  <div class="col-10">
+    <input name = "name" class="form-control" type="text" id="name_input">
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-2 col-form-label">
+    Type of product
+  </label>
+  <div class="col-10">
+    <input name = "type" class="form-control" type="text"  id="type_input">
+  </div>
+</div>
+<div class="form-group row">
+    <label class="col-2 col-form-label"> Rating </label>
+    <div class = "col-10">
+      <select name = "rating" class=" form-control" id="rating">
+        <option selected="selected" value = "1"> 1 [Hate] </option>
+        <option value = "2"> 2 [Poor] </option>
+        <option value = "3"> 3 [Fair] </option>
+        <option value = "4"> 4 [Good] </option>
+        <option value = "5"> 5 [Amazing] </option>
+      </select>
+    </div>
+</div>
+<div class="form-group row input-group">
+  <label class="col-2 col-form-label">Cost</label>
+  <span class="input-group-addon">$</span>
+  <input name = "cost" type="number" class="form-control" aria-label="Amount (to the nearest dollar)" id = "cost_input">
+  <span class="input-group-addon">.00</span>
+</div>
+<div class="form-group row">
+  <label class="col-2 col-form-label"> Description </label>
+  <div class="col-10">
+    <input name = "description" class="form-control" type="text" id="des_input">
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-2 col-form-label">Skin Type</label>
+  <div class="col-10">
+    <input name = "skin_type" class="form-control" type="text" id="skin_input">
+  </div>
+</div>
+<div class="form-group row" >
+    <label class="col-2 col-form-label">Duration of Use</label>
+    <div class = "col-10">
+    <select name = "duration" class="form-control" id="duration">
+      <option selected="selected" value = "1"> 1 month </option>
+      <option value = "3"> 3 month </option>
+      <option value = "6"> 6 months </option>
+      <option value = "9"> 9 months </option>
+      <option value = "12"> 12 months+ </option>
+    </select>
+  </div>
+</div>
+</div>
+<br>
+<button style= "margin-left:35%; margin-right:auto; color:white; background-color:pink;" type="submit" class="btn btn-lg actions">
+  Submit
+</button>
+<br>
+<br>
+</form>
+</article>
