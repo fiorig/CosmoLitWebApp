@@ -7,10 +7,6 @@ Name: Fiori Gebrekidan
 
 Date: November 17, 2017
 
-Project Topic: Cosmetic Product Ratings
-
-URL: ''
-
 ---
 
 
